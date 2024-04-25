@@ -2,7 +2,7 @@ export const firebaseConfig = {
     // Your web app's Firebase configuration here
     // See https://firebase.google.com/docs/web/setup#add-sdks-initialize
     apiKey: "AIzaSyAP4Y0WDyN8AGiKes9z9tIgd-A7w3dTRfU",
-    authDomain: "app-login-256509.firebaseapp.com",
+    authDomain: "https://push-pwa-eta.vercel.app",
     databaseURL: 'https://app-login-256509.firebaseio.com',
     projectId: 'app-login-256509',
     storageBucket: 'app-login-256509.appspot.com',
