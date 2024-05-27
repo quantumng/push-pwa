@@ -2,6 +2,9 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
+import React from 'react';
+import { ConfigProvider } from 'antd';
+
 export default function App({ Component, pageProps }: AppProps) {
   return <>
 <Head>
@@ -21,6 +24,8 @@ export default function App({ Component, pageProps }: AppProps) {
 <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
 <link rel="shortcut icon" href="/favicon.ico" />
 </Head>
-<Component {...pageProps} />
+<ConfigProvider theme={{}}>
+    <Component {...pageProps} />
+  </ConfigProvider>
   </>;
 }
