@@ -110,7 +110,7 @@ const NotificationComp = () => {
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={requestPermission}>Request Permission</button>
                     <br />
                     <br />
-                    {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={deleteTokenFromFirebase}>Cancel Push</button> */}
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={deleteTokenFromFirebase}>Cancel Push</button>
                 </div>
             </div>
         </div>
