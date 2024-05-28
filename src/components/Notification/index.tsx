@@ -13,6 +13,7 @@ const NotificationComp = () => {
     function sendTokenToServer(currentToken: string) {
       if (!isTokenSentToServer()) {
         console.log('Sending token to server...', currentToken);
+        setMessage('Sending token to server...');
         // TODO(developer): Send the current token to your server.
         setTokenSentToServer(true);
       } else {
@@ -55,6 +56,7 @@ const NotificationComp = () => {
       getToken(messaging).then((currentToken) => {
         deleteToken(messaging).then(() => {
           console.log('Token deleted.', currentToken);
+          setMessage('Token deleted.');
           setTokenSentToServer(false);
           // Once token is deleted update UI.
           resetUI();
@@ -72,6 +74,7 @@ const NotificationComp = () => {
       Notification.requestPermission().then((permission) => {
         if (permission === 'granted') {
           console.log('Notification permission granted.');
+          setMessage('Notification permission granted.');
           // TODO(developer): Retrieve a registration token for use with FCM.
           // In many cases once an app has been granted notification permission,
           // it should update its UI reflecting this.
@@ -99,13 +102,15 @@ const NotificationComp = () => {
         <div>
             <h1>Notification</h1>
             <div className="w-full font-mono text-sm">
-                <h3>Message</h3>
-                <p>{message}</p>
-                <div>
+                <div className="flex mt-4">
+                  <h3>Status Message: </h3>
+                  <p>{message}</p>
+                </div>
+                <div className="mt-4">
                     <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={requestPermission}>Request Permission</button>
                     <br />
                     <br />
-                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={deleteTokenFromFirebase}>Cancel Push</button>
+                    {/* <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={deleteTokenFromFirebase}>Cancel Push</button> */}
                 </div>
             </div>
         </div>

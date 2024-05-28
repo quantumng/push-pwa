@@ -11,13 +11,13 @@ const NotificationComp = dynamic(() => import("../components/Notification"), {
 
 export default function Home() {
 
-  const id = process.env.FIREBASE_CLIENT_ID;
+  // const id = process.env.FIREBASE_CLIENT_ID;
 
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      <Button type="primary">{id}</Button>
+      {/* <Button type="primary">{id}</Button> */}
       <NotificationComp />
     </main>
   );
